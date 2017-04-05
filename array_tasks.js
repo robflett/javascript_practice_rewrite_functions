@@ -29,9 +29,16 @@ var arrayTasks = {
 		    return total;
 	},
 
-	// findDuplicates: function (arr) {
+	findDuplicates: function (arr) {
+		new_array = []
 		
-	// },
+		return arr.reduce(function(new_array, val, i) {
+		    if (arr.indexOf(val) !== i && new_array.indexOf(val) === -1) {
+		      new_array.push(val);
+		    }
+		    return new_array;
+		  }, []);
+	},
 
 	// removeAndClone: function (arr, valueToRemove) {
 		
