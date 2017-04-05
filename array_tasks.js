@@ -12,9 +12,14 @@ var arrayTasks = {
 		return arr;
 	},
 
-	// square: function (arr) {
-		
-	// },
+	square: function (arr) {
+		new_array = []
+		for (var i=1; i < arr.length+1; i++) {
+			var n = i * i;
+			new_array.push(n);
+		}
+		return new_array;
+	},
 
 	// sum: function (arr) {
 		
