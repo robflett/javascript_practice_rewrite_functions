@@ -41,7 +41,6 @@ var arrayTasks = {
 	},
 
 	removeAndClone: function (arr, valueToRemove) {
-	
 	var filteredArray = [];
 	    for (var object of arr) {
 	      if (object != valueToRemove) {
@@ -51,25 +50,26 @@ var arrayTasks = {
 	    return filteredArray;
 	},
 
-	// findIndexesOf: function (arr, itemToFind) {
-	// 	// new_array = []
-	// 	// for (var i=1; i < arr.length+1; i++) {
-	// 	// 	if (arr.includes? itemToFind) {
-	// 	// 	new_array.push(i)};
-	// 	// }
-	// 	// return new_array;
-	// 	var filteredArray = [];
-	// 	    for (var object of arr) {
-	// 	      if (object == itemToFind) {
-	// 	        filteredArray.push(object);
-	// 	      }
-	// 	    }
-	// 	    return filteredArray;
-	// },
+	findIndexesOf: function (arr, itemToFind) {
+		new_array = []
+		// for (var i=1; i < arr.length; i++) {
+		// 	if (i === itemToFind){
+		// 		new_array.push(i)
+		// 	}
+		// }
+		arr.forEach(function(item, index){
+			if (item === itemToFind) new_array.push(index);
+		})
+		return new_array;
+	},
 
-	// sumOfAllEvenNumbersSquared: function (arr) {
+	sumOfAllEvenNumbersSquared: function (arr) {
+		var sum = 0;
+		sum = arr.reduce(function(acc, element){
+			return element % 2 === 0 ? acc + (element * element) : acc
+		}, 0)
 		
-	// }
+	}
 
 }
 
